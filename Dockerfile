@@ -1,6 +1,9 @@
 FROM ruby:alpine
 MAINTAINER Derek Smith <drsmith.phys@gmail.com>
 
+ENV REDIS_URL=redis://redis:6379/0
+ENV REDIS_NAMESPACE=sidekiq
+
 # Make ap dir
 RUN mkdir -p /usr/src/sidekiq
 WORKDIR /usr/src/sidekiq
